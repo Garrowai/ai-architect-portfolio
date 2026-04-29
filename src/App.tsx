@@ -105,12 +105,12 @@ export default function App() {
                 View Portfolio Work <ArrowRight className="ml-2 h-5 w-5" />
               </a>
               <a
-                href="https://github.com/"
+                href="https://github.com/garrowai/ai-architect-portfolio"
                 target="_blank"
                 rel="noreferrer"
                 className="inline-flex items-center justify-center rounded-2xl border border-white/20 bg-white/5 px-6 py-4 text-base font-medium text-[#f5f0e8] transition hover:bg-white/10"
               >
-                <ExternalLink className="mr-2 h-5 w-5" /> GitHub Coming Soon
+                <ExternalLink className="mr-2 h-5 w-5" /> View GitHub
               </a>
             </div>
           </motion.div>
@@ -236,7 +236,7 @@ export default function App() {
             </h2>
           </div>
           <a
-            href="https://github.com/"
+            href="https://github.com/garrowai/ai-architect-portfolio"
             target="_blank"
             rel="noreferrer"
             className="inline-flex w-fit items-center justify-center rounded-2xl border border-white/20 bg-white/5 px-6 py-4 text-base font-medium text-[#f5f0e8] transition hover:bg-white/10"
@@ -283,7 +283,7 @@ export default function App() {
             </div>
             <div className="flex items-center">
               <a
-                href="mailto:your-email@example.com"
+                href="mailto:garrowai@proton.me"
                 className="inline-flex items-center justify-center rounded-2xl bg-[#f5f0e8] px-6 py-4 text-base font-medium text-black transition hover:bg-white"
               >
                 <Mail className="mr-2 h-5 w-5" /> Contact Me
