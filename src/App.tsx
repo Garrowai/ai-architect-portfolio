@@ -265,9 +265,85 @@ export default function App() {
         </div>
       </section>
 
-      <section className="mx-auto max-w-7xl px-6 pb-20 md:px-10">
+      <section className="border-y border-white/10 bg-white/[0.025]">
+        <div className="mx-auto max-w-7xl px-6 py-20 md:px-10">
+          <div className="mb-12 max-w-3xl">
+            <p className="text-sm uppercase tracking-[0.25em] text-red-300">
+              Case Study 01
+            </p>
+            <h2 className="mt-3 text-4xl font-semibold tracking-tight md:text-5xl">
+              AI Architect Portfolio Website.
+            </h2>
+            <p className="mt-5 text-lg leading-8 text-[#d8d0c5]">
+              My first public portfolio build, created to establish a
+              professional online presence, connect my GitHub, document my
+              learning path and start showing practical proof of work.
+            </p>
+          </div>
+
+          <div className="grid gap-5 md:grid-cols-2 lg:grid-cols-4">
+            <div className="rounded-3xl border border-white/10 bg-black/30 p-6">
+              <p className="text-sm uppercase tracking-[0.2em] text-red-300">
+                Problem
+              </p>
+              <h3 className="mt-4 text-2xl font-semibold text-[#f5f0e8]">
+                No professional AI presence
+              </h3>
+              <p className="mt-4 text-sm leading-6 text-[#d8d0c5]">
+                I needed a clean website that could explain who I am, what I am
+                learning, what I am building and where my portfolio work will
+                live.
+              </p>
+            </div>
+
+            <div className="rounded-3xl border border-white/10 bg-black/30 p-6">
+              <p className="text-sm uppercase tracking-[0.2em] text-red-300">
+                Stack
+              </p>
+              <h3 className="mt-4 text-2xl font-semibold text-[#f5f0e8]">
+                React, Vite and Tailwind
+              </h3>
+              <p className="mt-4 text-sm leading-6 text-[#d8d0c5]">
+                The site was built with React and Vite, styled with Tailwind,
+                version controlled with Git, uploaded to GitHub and deployed
+                through Netlify.
+              </p>
+            </div>
+
+            <div className="rounded-3xl border border-white/10 bg-black/30 p-6">
+              <p className="text-sm uppercase tracking-[0.2em] text-red-300">
+                Outcome
+              </p>
+              <h3 className="mt-4 text-2xl font-semibold text-[#f5f0e8]">
+                Live and mobile tested
+              </h3>
+              <p className="mt-4 text-sm leading-6 text-[#d8d0c5]">
+                The site is live online, connected to GitHub, working on mobile
+                and ready to grow as new projects, case studies and AI builds
+                are added.
+              </p>
+            </div>
+
+            <div className="rounded-3xl border border-white/10 bg-black/30 p-6">
+              <p className="text-sm uppercase tracking-[0.2em] text-red-300">
+                What I Learned
+              </p>
+              <h3 className="mt-4 text-2xl font-semibold text-[#f5f0e8]">
+                Full deployment flow
+              </h3>
+              <p className="mt-4 text-sm leading-6 text-[#d8d0c5]">
+                I learned how to create a React project, install packages, fix
+                build errors, commit code, push to GitHub and deploy a
+                production website.
+              </p>
+            </div>
+          </div>
+        </div>
+      </section>
+
+      <section className="mx-auto max-w-7xl px-6 py-20 md:px-10">
         <div className="overflow-hidden rounded-[2rem] border border-white/10 bg-gradient-to-br from-red-950/70 via-black to-yellow-950/40 p-8 md:p-12">
-          <div className="grid gap-10 md:grid-cols-[1fr_auto]">
+          <div className="grid gap-10 md:grid-cols-[1fr_auto] md:items-center">
             <div>
               <p className="text-sm uppercase tracking-[0.25em] text-red-100/80">
                 Contact
@@ -281,7 +357,8 @@ export default function App() {
                 process and improve the system over time.
               </p>
             </div>
-            <div className="flex items-center">
+
+            <div className="flex md:justify-end">
               <a
                 href="mailto:garrowai@proton.me"
                 className="inline-flex items-center justify-center rounded-2xl bg-[#f5f0e8] px-6 py-4 text-base font-medium text-black transition hover:bg-white"
