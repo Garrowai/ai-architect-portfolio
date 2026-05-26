@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { motion } from "framer-motion";
 import { Link } from "react-router-dom";
 import {
@@ -118,6 +119,10 @@ const qualifications = [
 // ─── Component ───────────────────────────────────────────────────────────────
 
 export default function Home() {
+  useEffect(() => {
+    document.title = "Alex Garrow | Cybersecurity, AI & Automation";
+  }, []);
+
   return (
     <main className="min-h-screen bg-[#080808] text-[#f5f0e8]">
 

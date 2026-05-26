@@ -1,3 +1,4 @@
+import { useEffect } from "react";
 import { motion } from "framer-motion";
 import { ExternalLink, Mail } from "lucide-react";
 
@@ -162,6 +163,10 @@ const stats = [
 // ─── Component ───────────────────────────────────────────────────────────────
 
 export default function Portfolio() {
+  useEffect(() => {
+    document.title = "Portfolio | Alex Garrow | Cybersecurity, AI & Automation";
+  }, []);
+
   return (
     <main className="min-h-screen bg-[#080808] pt-20 text-[#f5f0e8]">
 
