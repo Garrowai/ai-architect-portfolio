@@ -1,6 +1,7 @@
 import { useEffect } from "react";
 import { motion } from "framer-motion";
 import { ExternalLink, Mail } from "lucide-react";
+import LinkedInIcon from "../components/LinkedInIcon";
 
 // ─── Types & Data ─────────────────────────────────────────────────────────────
 
@@ -306,9 +307,30 @@ export default function Portfolio() {
 
       {/* ─── Footer ───────────────────────────────────────────────── */}
       <footer className="border-t border-white/10 px-6 py-8 md:px-10">
-        <div className="mx-auto flex max-w-7xl flex-col justify-between gap-4 text-xs text-[#6b6560] md:flex-row">
+        <div className="mx-auto flex max-w-7xl flex-col justify-between gap-4 text-xs text-[#6b6560] md:flex-row md:items-center">
           <p>© {new Date().getFullYear()} Alex Garrow — Cybersecurity, AI &amp; Automation</p>
-          <p>Built with React, Vite and Tailwind CSS</p>
+          <div className="flex flex-wrap items-center gap-5">
+            <a
+              href="https://www.linkedin.com/in/alex-garrow/"
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-1.5 transition-colors hover:text-[#a8a29e]"
+            >
+              <LinkedInIcon className="h-3.5 w-3.5" />
+              LinkedIn
+            </a>
+            <a
+              href="https://github.com/garrowai/ai-architect-portfolio"
+              target="_blank"
+              rel="noreferrer"
+              className="inline-flex items-center gap-1.5 transition-colors hover:text-[#a8a29e]"
+            >
+              <ExternalLink className="h-3.5 w-3.5" />
+              GitHub
+            </a>
+            <span className="hidden md:inline">·</span>
+            <span>Built with React, Vite and Tailwind CSS</span>
+          </div>
         </div>
       </footer>
     </main>
