@@ -41,10 +41,11 @@ const services = [
 ];
 
 const qualifications = [
-  "Level 5 Diploma in Web Applications Development with AI (starting Jan 2026)",
   "CS50x Introduction to Computer Science — in progress",
   "Learning Python, TypeScript, SQL, Flask and React",
   "AI roadmap: CS50 AI, Azure AI-900, Hugging Face NLP, RAG and agent frameworks",
+  "Cyber security path: ISC2 CC → CompTIA Security+ → CompTIA CySA+",
+  "Studying AI governance and the responsible deployment of AI systems",
   "Building toward production-ready AI systems and agent-based architectures",
 ];
 
