@@ -14,6 +14,7 @@ import {
   ExternalLink,
 } from "lucide-react";
 import LinkedInIcon from "../components/LinkedInIcon";
+import headshotUrl from "../assets/headshot.png";
 
 // ─── Data ────────────────────────────────────────────────────────────────────
 
@@ -209,76 +210,20 @@ export default function Home() {
           whileInView={{ opacity: 1, y: 0 }}
           viewport={{ once: true }}
           transition={{ duration: 0.6 }}
-          className="overflow-hidden rounded-2xl border border-white/10 bg-white/[0.03]"
+          className="overflow-hidden rounded-2xl border border-white/10 bg-white/[0.025]"
         >
-          <div className="border-b border-white/10 bg-gradient-to-r from-red-950/35 via-transparent to-transparent px-7 py-8 md:px-10 md:py-10">
-            <div className="flex flex-col gap-4 md:flex-row md:items-start md:justify-between">
-              <div className="max-w-2xl">
-                <span className="mb-4 inline-flex rounded-full border border-amber-500/20 bg-amber-500/[0.08] px-3 py-1 text-xs text-amber-300">
-                  In Development
-                </span>
-                <h3 className="mt-3 text-2xl font-semibold text-[#f5f0e8] md:text-3xl">
-                  Beelink SER5{" "}
-                  <span className="text-[#c8c0b5]">— Dedicated AI, Python &amp; Cyber Lab</span>
-                </h3>
-                <p className="mt-3 text-sm leading-6 text-[#a8a29e]">
-                  A Beelink SER5 (Ryzen 5 5500U, 32GB RAM, 500GB SSD) configured as a dedicated
-                  lab machine for Python development, cybersecurity practice, local AI
-                  experimentation and homelab work — without wiping Windows. Windows 11 stays as
-                  the main OS with WSL2 Ubuntu inside it for a real Linux development environment.
-                  Docker Desktop, Ollama (running Llama 3.1 and Qwen) and Odysseus provide a
-                  fully self-hosted, private AI workspace with zero API cost. Project folders are
-                  organised across Python, Cybersecurity, AI, Homelab and Websites.
-                </p>
-              </div>
-              <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl border border-white/10 bg-red-950/30">
-                <Server className="h-6 w-6 text-red-300/70" />
-              </div>
+          <div className="flex flex-col items-center justify-center px-10 py-24 text-center">
+            <div className="mb-5 flex h-12 w-12 items-center justify-center rounded-2xl border border-white/10 bg-white/[0.04]">
+              <Server className="h-5 w-5 text-[#a8a29e]" />
             </div>
-          </div>
-
-          <div className="grid divide-y divide-white/[0.07] md:grid-cols-3 md:divide-x md:divide-y-0">
-            <div className="px-7 py-6 md:px-8">
-              <p className="mb-3 text-xs uppercase tracking-[0.2em] text-red-400/70">Stack</p>
-              <div className="flex flex-wrap gap-2">
-                {["Beelink SER5", "WSL2 Ubuntu", "Ollama", "Odysseus", "Docker Desktop", "VS Code"].map((tag) => (
-                  <span
-                    key={tag}
-                    className="rounded-lg border border-white/10 bg-white/[0.04] px-2.5 py-1 text-xs text-[#d8d0c5]"
-                  >
-                    {tag}
-                  </span>
-                ))}
-              </div>
-            </div>
-            <div className="px-7 py-6 md:px-8">
-              <p className="mb-3 text-xs uppercase tracking-[0.2em] text-red-400/70">Setup</p>
-              <p className="text-xs leading-5 text-[#a8a29e]">
-                Windows 11 as the main OS with WSL2 Ubuntu for a real Linux environment inside it.
-                Windows Terminal and VS Code with Python, Docker and WSL extensions. Git,
-                Docker Desktop with WSL integration, Ollama running Llama 3.1 and Qwen, and
-                Odysseus connected to Ollama as a private self-hosted AI workspace.
-              </p>
-            </div>
-            <div className="px-7 py-6 md:px-8">
-              <p className="mb-3 text-xs uppercase tracking-[0.2em] text-red-400/70">
-                What I'm Proving
-              </p>
-              <p className="text-xs leading-5 text-[#a8a29e]">
-                Running Linux, Docker and local AI on a single machine without dual-booting or
-                a dedicated server. Using it for Python development, cybersecurity practice and
-                local AI experiments — with full data control and no cloud dependency or API cost.
-              </p>
-            </div>
-          </div>
-
-          <div className="flex items-center justify-between border-t border-white/[0.07] px-7 py-5 md:px-10">
-            <p className="text-xs text-[#a8a29e]">
-              View all projects, planned builds and concepts on the portfolio page.
+            <h3 className="text-lg font-semibold text-[#f5f0e8]">First project coming soon</h3>
+            <p className="mt-3 max-w-sm text-sm leading-6 text-[#a8a29e]">
+              Currently in early development. Check back soon, or view what's planned on the
+              portfolio page.
             </p>
             <Link
               to="/portfolio"
-              className="inline-flex items-center gap-2 rounded-xl bg-red-800/80 px-4 py-2.5 text-xs font-medium text-white transition hover:bg-red-700"
+              className="mt-8 inline-flex items-center gap-2 rounded-xl border border-white/10 bg-white/5 px-5 py-2.5 text-xs font-medium text-[#f5f0e8] transition hover:bg-white/10"
             >
               View Full Portfolio <ArrowRight className="h-3.5 w-3.5" />
             </Link>
@@ -404,6 +349,11 @@ export default function Home() {
             viewport={{ once: true }}
             transition={{ duration: 0.55 }}
           >
+            <img
+              src={headshotUrl}
+              alt="Alex Garrow"
+              className="mb-6 h-20 w-20 rounded-full border-2 border-white/15 object-cover shadow-lg shadow-black/50 ring-4 ring-white/[0.05]"
+            />
             <p className="text-xs uppercase tracking-[0.3em] text-red-400/70">About</p>
             <h2 className="mt-3 text-3xl font-semibold tracking-tight md:text-4xl">
               Early-stage. Focused. Building in public.
@@ -454,26 +404,52 @@ export default function Home() {
       {/* ─── 6. Contact ───────────────────────────────────────────── */}
       <section className="mx-auto max-w-7xl px-6 py-20 md:px-10">
         <div className="overflow-hidden rounded-2xl border border-white/10 bg-gradient-to-br from-red-950/40 via-[#0d0505] to-[#080808] p-8 md:p-12">
-          <div className="grid gap-8 md:grid-cols-[1fr_auto] md:items-center">
+          <div className="grid gap-10 md:grid-cols-2">
             <div>
               <p className="text-xs uppercase tracking-[0.3em] text-red-300/70">Contact</p>
-              <h2 className="mt-3 max-w-2xl text-3xl font-semibold tracking-tight text-[#f5f0e8]">
+              <h2 className="mt-3 text-3xl font-semibold tracking-tight text-[#f5f0e8]">
                 Open to feedback, collaboration and early practical builds.
               </h2>
-              <p className="mt-4 max-w-xl text-sm leading-7 text-[#a8a29e]">
+              <p className="mt-4 text-sm leading-7 text-[#a8a29e]">
                 I'm early-stage and building in public. If you're working on something in
                 security, automation or AI — or you want to give feedback on what I'm building —
                 I'm genuinely open to the conversation.
               </p>
             </div>
-            <div className="flex md:justify-end">
-              <a
-                href="mailto:garrowai@proton.me"
+
+            <form
+              action="https://formspree.io/f/YOUR_FORM_ID"
+              method="POST"
+              className="flex flex-col gap-3"
+            >
+              <input
+                type="text"
+                name="name"
+                placeholder="Your name"
+                required
+                className="w-full rounded-xl border border-white/10 bg-white/[0.05] px-4 py-3 text-sm text-[#f5f0e8] outline-none transition placeholder:text-[#6b6560] focus:border-white/20 focus:bg-white/[0.08]"
+              />
+              <input
+                type="email"
+                name="email"
+                placeholder="Your email"
+                required
+                className="w-full rounded-xl border border-white/10 bg-white/[0.05] px-4 py-3 text-sm text-[#f5f0e8] outline-none transition placeholder:text-[#6b6560] focus:border-white/20 focus:bg-white/[0.08]"
+              />
+              <textarea
+                name="message"
+                placeholder="Your message"
+                rows={4}
+                required
+                className="w-full resize-none rounded-xl border border-white/10 bg-white/[0.05] px-4 py-3 text-sm text-[#f5f0e8] outline-none transition placeholder:text-[#6b6560] focus:border-white/20 focus:bg-white/[0.08]"
+              />
+              <button
+                type="submit"
                 className="inline-flex items-center justify-center rounded-xl bg-[#f5f0e8] px-6 py-3.5 text-sm font-medium text-black transition hover:bg-white"
               >
-                <Mail className="mr-2 h-4 w-4" /> Get in Touch
-              </a>
-            </div>
+                <Mail className="mr-2 h-4 w-4" /> Send Message
+              </button>
+            </form>
           </div>
         </div>
       </section>
