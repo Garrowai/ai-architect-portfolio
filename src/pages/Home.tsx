@@ -218,14 +218,17 @@ export default function Home() {
                   In Development
                 </span>
                 <h3 className="mt-3 text-2xl font-semibold text-[#f5f0e8] md:text-3xl">
-                  Local AI Workstation +{" "}
-                  <span className="text-[#c8c0b5]">Self-Hosted LLM System</span>
+                  Beelink SER5{" "}
+                  <span className="text-[#c8c0b5]">— Dedicated AI, Python &amp; Cyber Lab</span>
                 </h3>
                 <p className="mt-3 text-sm leading-6 text-[#a8a29e]">
-                  A mini PC configured as a private AI workstation — running open-source language
-                  models locally via Ollama and Open WebUI, with remote access enabled. Zero API
-                  costs, full data privacy and a live testbed for AI workflow and security
-                  automation experiments.
+                  A Beelink SER5 (Ryzen 5 5500U, 32GB RAM, 500GB SSD) configured as a dedicated
+                  AI, Python, cybersecurity and homelab machine — without wiping Windows. Windows
+                  11 stays as the main OS with WSL2 Ubuntu running inside it, giving a real Linux
+                  environment for CS50x, Python and cyber learning. Docker Desktop, Ollama (running
+                  Llama 3.1 and Qwen), and Odysseus provide a fully self-hosted, private AI
+                  workspace. Project folders are organised across Python, CS50, Cybersecurity, AI,
+                  Homelab and Websites.
                 </p>
               </div>
               <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl border border-white/10 bg-red-950/30">
@@ -238,7 +241,7 @@ export default function Home() {
             <div className="px-7 py-6 md:px-8">
               <p className="mb-3 text-xs uppercase tracking-[0.2em] text-red-400/70">Stack</p>
               <div className="flex flex-wrap gap-2">
-                {["Ollama", "Open WebUI", "LM Studio", "Mini PC", "Remote access"].map((tag) => (
+                {["Beelink SER5", "WSL2 Ubuntu", "Ollama", "Odysseus", "Docker Desktop", "VS Code"].map((tag) => (
                   <span
                     key={tag}
                     className="rounded-lg border border-white/10 bg-white/[0.04] px-2.5 py-1 text-xs text-[#d8d0c5]"
@@ -249,11 +252,12 @@ export default function Home() {
               </div>
             </div>
             <div className="px-7 py-6 md:px-8">
-              <p className="mb-3 text-xs uppercase tracking-[0.2em] text-red-400/70">Problem</p>
+              <p className="mb-3 text-xs uppercase tracking-[0.2em] text-red-400/70">Setup</p>
               <p className="text-xs leading-5 text-[#a8a29e]">
-                Cloud AI creates cost dependency and exposes data to third parties. A local setup
-                gives full control over models, data and inference — with no recurring API cost
-                and the ability to work offline.
+                Windows 11 as the main OS with WSL2 Ubuntu for a real Linux environment inside it.
+                Windows Terminal and VS Code with Python, Docker and WSL extensions. Git,
+                Docker Desktop with WSL integration, Ollama running Llama 3.1 and Qwen, and
+                Odysseus connected to Ollama as a private self-hosted AI workspace.
               </p>
             </div>
             <div className="px-7 py-6 md:px-8">
@@ -261,9 +265,9 @@ export default function Home() {
                 What I'm Proving
               </p>
               <p className="text-xs leading-5 text-[#a8a29e]">
-                Local model deployment, hardware optimisation, context management, private data
-                handling and using self-hosted LLMs as a foundation for security and automation
-                workflow experiments.
+                Running Linux, Docker and local AI on a single machine without dual-booting.
+                Using it as a live learning lab for CS50x, Python, Security+ and CySA+ — with
+                local models available for AI experiments and no cloud dependency or API cost.
               </p>
             </div>
           </div>
