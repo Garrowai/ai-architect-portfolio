@@ -76,7 +76,7 @@ const focus = [
   {
     step: "02",
     label: "Cybersecurity",
-    active: true,
+    active: false,
     items: [
       "ISC2 Certified in Cybersecurity",
       "CompTIA Security+",
@@ -110,11 +110,11 @@ const focus = [
 
 const qualifications = [
   "CS50x Introduction to Computer Science — in progress",
-  "Learning Python, TypeScript, SQL and Flask",
+  "Learning Python, SQL and Flask",
   "Cybersecurity path: ISC2 CC → CompTIA Security+ → CompTIA CySA+",
-  "AI learning: CS50 AI, Azure AI-900, Hugging Face NLP, RAG and agent frameworks",
+  "Building toward AI agents, RAG knowledge systems and local AI infrastructure",
   "Studying AI governance and the responsible deployment of AI systems",
-  "Building toward AI-assisted security automation and governance tooling",
+  "Building toward security automation tooling and lightweight governance systems",
 ];
 
 // ─── Component ───────────────────────────────────────────────────────────────
@@ -223,12 +223,12 @@ export default function Home() {
                 </h3>
                 <p className="mt-3 text-sm leading-6 text-[#a8a29e]">
                   A Beelink SER5 (Ryzen 5 5500U, 32GB RAM, 500GB SSD) configured as a dedicated
-                  AI, Python, cybersecurity and homelab machine — without wiping Windows. Windows
-                  11 stays as the main OS with WSL2 Ubuntu running inside it, giving a real Linux
-                  environment for CS50x, Python and cyber learning. Docker Desktop, Ollama (running
-                  Llama 3.1 and Qwen), and Odysseus provide a fully self-hosted, private AI
-                  workspace. Project folders are organised across Python, CS50, Cybersecurity, AI,
-                  Homelab and Websites.
+                  lab machine for Python development, cybersecurity practice, local AI
+                  experimentation and homelab work — without wiping Windows. Windows 11 stays as
+                  the main OS with WSL2 Ubuntu inside it for a real Linux development environment.
+                  Docker Desktop, Ollama (running Llama 3.1 and Qwen) and Odysseus provide a
+                  fully self-hosted, private AI workspace with zero API cost. Project folders are
+                  organised across Python, Cybersecurity, AI, Homelab and Websites.
                 </p>
               </div>
               <div className="flex h-14 w-14 shrink-0 items-center justify-center rounded-2xl border border-white/10 bg-red-950/30">
@@ -265,9 +265,9 @@ export default function Home() {
                 What I'm Proving
               </p>
               <p className="text-xs leading-5 text-[#a8a29e]">
-                Running Linux, Docker and local AI on a single machine without dual-booting.
-                Using it as a live learning lab for CS50x, Python, Security+ and CySA+ — with
-                local models available for AI experiments and no cloud dependency or API cost.
+                Running Linux, Docker and local AI on a single machine without dual-booting or
+                a dedicated server. Using it for Python development, cybersecurity practice and
+                local AI experiments — with full data control and no cloud dependency or API cost.
               </p>
             </div>
           </div>
@@ -373,6 +373,11 @@ export default function Home() {
                 {phase.active && (
                   <span className="rounded-full border border-red-900/40 bg-red-950/30 px-2 py-0.5 text-[10px] text-red-300/80">
                     Active
+                  </span>
+                )}
+                {phase.step === "02" && (
+                  <span className="rounded-full border border-white/15 bg-white/[0.04] px-2 py-0.5 text-[10px] text-[#a8a29e]">
+                    Up Next
                   </span>
                 )}
               </div>
