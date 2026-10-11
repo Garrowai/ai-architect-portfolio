@@ -9,7 +9,8 @@ export default function Navbar() {
       <a className="skip-link" href="#main-content">Skip to content</a>
       <nav className="container navigation" aria-label="Main navigation">
         <Link to="/" className="brand" onClick={() => setOpen(false)}>
-          Alex Garrow<span>Systems &amp; automation</span>
+          <img className="brand-logo" src="/brand-logo.jpg" alt="" width="48" height="48" />
+          <div>Alex Garrow<span>Systems &amp; automation</span></div>
         </Link>
         <button className="menu-toggle" type="button" aria-label={open ? "Close navigation" : "Open navigation"} aria-expanded={open} aria-controls="navigation-links" onClick={() => setOpen(!open)}>
           {open ? <X /> : <Menu />}
