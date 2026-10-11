@@ -1,73 +1,29 @@
-# React + TypeScript + Vite
+# Alex Garrow's career transition portfolio
 
-This template provides a minimal setup to get React working in Vite with HMR and some ESLint rules.
+React, TypeScript, Vite and Tailwind website documenting a move into systems administration, infrastructure and automation. Current focus: PowerShell, Windows, Git and CS50x. Later study and technical builds are labelled as planned.
 
-Currently, two official plugins are available:
+## Development
 
-- [@vitejs/plugin-react](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react) uses [Oxc](https://oxc.rs)
-- [@vitejs/plugin-react-swc](https://github.com/vitejs/vite-plugin-react/blob/main/packages/plugin-react-swc) uses [SWC](https://swc.rs/)
+- `npm install`
+- `npm run dev`
+- `npm run lint`
+- `npm run build`
+- `npm run preview`
 
-## React Compiler
+## Content
 
-The React Compiler is not enabled on this template because of its impact on dev & build performances. To add it, see [this documentation](https://react.dev/learn/react-compiler/installation).
+- `src/pages/Home.tsx`: positioning, background and learning path presentation.
+- `src/data/portfolio.ts`: learning stages, project records and typed case-study structure.
+- `src/pages/Portfolio.tsx`: project progression and filters.
+- `src/components/PortfolioUI.tsx`: project rendering, route metadata and contact form.
+- `src/index.css`: responsive presentation and accessibility styles.
 
-## Expanding the ESLint configuration
+Only the website currently has live evidence. Four technical builds are planned, including a future cloud/hybrid capstone. Add real repository links and case-study fields only after evidence exists. The optional `caseStudy` field supports problem, environment, diagrams, tools, actions, troubleshooting, security implications, screenshots, results, lessons, improvements and interview talking points. Screenshots and diagrams need descriptive alt text. Clearly label simulations and sanitise output before publication.
 
-If you are developing a production application, we recommend updating the configuration to enable type-aware lint rules:
+The Cisco Computer Hardware Basics completion is recorded in the user-supplied career guide; no badge link is available in this repository.
 
-```js
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
+## Deployment
 
-      // Remove tseslint.configs.recommended and replace with this
-      tseslint.configs.recommendedTypeChecked,
-      // Alternatively, use this for stricter rules
-      tseslint.configs.strictTypeChecked,
-      // Optionally, add this for stylistic rules
-      tseslint.configs.stylisticTypeChecked,
+Existing routes remain `/` and `/portfolio`. Netlify publishes `dist` from the Vite production build. `public/_redirects` retains the SPA fallback for direct route visits. The existing Formspree POST contact destination and email fallback remain in use. Form submissions have not been sent during development verification.
 
-      // Other configs...
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
-
-You can also install [eslint-plugin-react-x](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-x) and [eslint-plugin-react-dom](https://github.com/Rel1cx/eslint-react/tree/main/packages/plugins/eslint-plugin-react-dom) for React-specific lint rules:
-
-```js
-// eslint.config.js
-import reactX from 'eslint-plugin-react-x'
-import reactDom from 'eslint-plugin-react-dom'
-
-export default defineConfig([
-  globalIgnores(['dist']),
-  {
-    files: ['**/*.{ts,tsx}'],
-    extends: [
-      // Other configs...
-      // Enable lint rules for React
-      reactX.configs['recommended-typescript'],
-      // Enable lint rules for React DOM
-      reactDom.configs.recommended,
-    ],
-    languageOptions: {
-      parserOptions: {
-        project: ['./tsconfig.node.json', './tsconfig.app.json'],
-        tsconfigRootDir: import.meta.dirname,
-      },
-      // other options...
-    },
-  },
-])
-```
+Live site: https://garrow-cyber-ai.netlify.app/
