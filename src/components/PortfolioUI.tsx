@@ -1,16 +1,17 @@
 import { useEffect } from "react";
 import { ExternalLink, ArrowUpRight, Mail, Send } from "lucide-react";
 import type { Project } from "../data/portfolio";
+import { siteTitle, siteDescription, siteUrl } from "../data/site";
 
-export function PageMeta({ title, description }: { title: string; description: string }) {
+export function PageMeta() {
   useEffect(() => {
-    document.title = title;
-    for (const selector of ['meta[name="description"]', 'meta[property="og:description"]', 'meta[name="twitter:description"]']) document.querySelector(selector)?.setAttribute("content", description);
-    for (const selector of ['meta[property="og:title"]', 'meta[name="twitter:title"]']) document.querySelector(selector)?.setAttribute("content", title);
-    const url = "https://garrow-cyber-ai.netlify.app" + window.location.pathname;
+    document.title = siteTitle;
+    for (const selector of ['meta[name="description"]', 'meta[property="og:description"]', 'meta[name="twitter:description"]']) document.querySelector(selector)?.setAttribute("content", siteDescription);
+    for (const selector of ['meta[property="og:title"]', 'meta[name="twitter:title"]']) document.querySelector(selector)?.setAttribute("content", siteTitle);
+    const url = siteUrl + (window.location.pathname === "/" ? "" : window.location.pathname);
     document.querySelector('link[rel="canonical"]')?.setAttribute("href", url);
     document.querySelector('meta[property="og:url"]')?.setAttribute("content", url);
-  }, [title, description]);
+  }, []);
   return null;
 }
 
@@ -32,7 +33,7 @@ export function ProjectCard({ project }: { project: Project }) {
 
 export function Contact() {
   return <section id="contact" className="section container contact-grid" aria-labelledby="contact-title">
-    <div><SectionHeading eyebrow="Contact" id="contact-title" title="A conversation about the next step." text="I'm interested in entry opportunities across IT support, asset management, systems administration and endpoint operations. Feedback on my learning and practical work is welcome." /><a href="mailto:garrowai@proton.me" className="text-link"><Mail size={18} /> garrowai@proton.me</a></div>
+    <div><SectionHeading eyebrow="Contact" id="contact-title" title="Let's talk systems, projects & opportunities." text="I'm interested in IT support, systems administration and infrastructure opportunities where practical troubleshooting and automation matter. I'm also happy to discuss projects, technical learning and feedback on my work." /><a href="mailto:garrowai@proton.me" className="text-link"><Mail size={18} /> garrowai@proton.me</a></div>
     <form action="https://formspree.io/f/mkoaoabl" method="POST"><label htmlFor="contact-name">Name</label><input id="contact-name" name="name" autoComplete="name" required /><label htmlFor="contact-email">Email</label><input id="contact-email" name="email" type="email" autoComplete="email" required /><label htmlFor="contact-message">Message</label><textarea id="contact-message" name="message" rows={5} required /><button type="submit" className="button primary">Send message <Send size={16} /></button></form>
   </section>;
 }

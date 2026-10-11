@@ -1,6 +1,6 @@
-# Alex Garrow's career transition portfolio
+# Alex Garrow's technical portfolio
 
-React, TypeScript, Vite and Tailwind website documenting a move into systems administration, infrastructure and automation. Current focus: PowerShell, Windows, Git and CS50x. Later study and technical builds are labelled as planned.
+React, TypeScript, Vite and Tailwind website showcasing technical development in systems, infrastructure and automation. Current focus: PowerShell, Windows systems, Git and CS50x. Later study and technical builds are labelled as planned.
 
 ## Development
 
@@ -14,6 +14,7 @@ React, TypeScript, Vite and Tailwind website documenting a move into systems adm
 
 - `src/pages/Home.tsx`: positioning, background and learning path presentation.
 - `src/data/portfolio.ts`: learning stages, project records and typed case-study structure.
+- `src/data/site.ts`: shared site title, description and canonical domain.
 - `src/pages/Portfolio.tsx`: project progression and filters.
 - `src/components/PortfolioUI.tsx`: project rendering, route metadata and contact form.
 - `src/index.css`: responsive presentation and accessibility styles.
@@ -26,4 +27,4 @@ The Cisco Computer Hardware Basics completion is recorded in the user-supplied c
 
 Existing routes remain `/` and `/portfolio`. Netlify publishes `dist` from the Vite production build. `public/_redirects` retains the SPA fallback for direct route visits. The existing Formspree POST contact destination and email fallback remain in use. Form submissions have not been sent during development verification.
 
-Live site: https://garrow-cyber-ai.netlify.app/
+Live site: https://alexgarrow.dev
