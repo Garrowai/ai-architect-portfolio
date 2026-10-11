@@ -1,6 +1,6 @@
 import { Link } from "react-router-dom";
 import { ArrowRight, Terminal, Network, Workflow } from "lucide-react";
-import headshot from "../assets/headshot.png";
+import headshot from "../assets/headshot.jpg";
 import { learningPath, projects } from "../data/portfolio";
 import { Contact, PageMeta, ProjectCard, SectionHeading } from "../components/PortfolioUI";
 
@@ -37,7 +37,7 @@ export default function Home() {
           <p>Longer term, I want to combine systems administration and infrastructure with PowerShell and Python automation: understanding a problem, delivering a reliable solution and explaining how it works.</p>
           <p>Cloud, security engineering and architecture are possible extensions of that foundation. GRC and responsible AI remain later interests.</p>
         </div>
-        <aside className="profile"><img src={headshot} alt="Alex Garrow" width="1254" height="1254" loading="lazy" /><h3>A responsible working approach</h3><ul><li>Procedures, reliability and situational awareness</li><li>Clear communication, documentation and escalation</li><li>Testing, troubleshooting and safe change</li><li>Publish personal labs and non-confidential examples</li></ul><p className="small">This portfolio reflects a career transition and developing skills.</p></aside>
+        <aside className="profile"><img src={headshot} alt="Alex Garrow" width="1280" height="1280" loading="lazy" /><h3>A responsible working approach</h3><ul><li>Procedures, reliability and situational awareness</li><li>Clear communication, documentation and escalation</li><li>Testing, troubleshooting and safe change</li><li>Publish personal labs and non-confidential examples</li></ul><p className="small">This portfolio reflects a career transition and developing skills.</p></aside>
       </section>
       <section id="learning" className="section band" aria-labelledby="learning-title"><div className="container">
         <SectionHeading eyebrow="Learning path" id="learning-title" title="One foundation. Several ways to grow." text="The sequence is guided by practical readiness, rather than fixed deadlines. Only the foundation stage is current; later stages are planned." />
